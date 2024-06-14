@@ -112,12 +112,12 @@
     }
   }
 
-  function toggleTheme() {
-    const isChecked = document.getElementById('theme-toggle').checked;
-    if (isChecked) {
-      document.body.classList.add('background2');
+  function toggleBackground() {
+    const htmlElement = document.documentElement;
+    if (htmlElement.classList.contains('background2')) {
+      htmlElement.classList.remove('background2');
     } else {
-      document.body.classList.remove('background2');
+      htmlElement.classList.add('background2');
     }
   }
 
@@ -130,7 +130,7 @@
   window.addEventListener('keydown', playSound);
   keys.forEach(key => key.addEventListener('click', handleSpecialKeys));
   window.addEventListener('keydown', handleSpecialKeys);
-  document.getElementById('theme-toggle').addEventListener('change', toggleTheme);
+  document.getElementById('theme-toggle').addEventListener('change', toggleBackground);
 </script>
 </body>
 </html>

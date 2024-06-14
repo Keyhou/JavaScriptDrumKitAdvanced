@@ -132,7 +132,7 @@ video {
   height: auto;
 }
 
-body.background2 {
+html.background2 {
   background: url('./background2.png') bottom center no-repeat;
   background-size: cover;
 }
